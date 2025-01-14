@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Водоснабдяване и Канализация - Сливен{% endblock title %}</title>
+    <!-- Връзка към твой CSS файл (или CSS фреймуърк) -->
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <!-- Лого или просто заглавие -->
+        <h1>Водоснабдяване и Канализация – Сливен</h1>
+
+        <!-- Главна навигация -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'about' %}">За нас</a></li>
+                <li><a href="#">Връзки</a></li>
+                <li><a href="#">Фотогалерия</a></li>
+                <li><a href="#">Контакти</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Цени</a></li>
+                <li><a href="#">Плащане на сметки</a></li>
+                <li><a href="#">Документи</a></li>
+                <li><a href="#">Профил на купувача</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основно съдържание, което ще се променя според страницата -->
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <!-- Футър с авторски права, контакти и т.н. -->
+    <footer>
+        <p>© 2025 Всички права запазени. ВиК Сливен</p>
+    </footer>
+</body>
+</html>
